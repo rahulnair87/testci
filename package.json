@@ -1,0 +1,26 @@
+{
+  "name": "testci",
+  "version": "1.0.0",
+  "description": "testing the ci options",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "fmt": "prettier --write \"**/*.js\"",
+    "fmt:check": "prettier --check  \"**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulnair87/testci.git"
+  },
+  "author": "rahul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahulnair87/testci/issues"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  },
+  "dependencies": {
+    "prettier": "^2.7.1"
+  }
+}
