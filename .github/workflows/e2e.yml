@@ -32,7 +32,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY}}
           aws-region: ${{ secrests.AWS_REGION}}
       
-      -name: Copy yoroi build from S3 to local
+      - name: Copy yoroi build from S3 to local
        run: |
        aws s3 cp s3://fibo-e2e-testdata/YoroiBuilds  YoroiB/ --recursive
         
