@@ -2,7 +2,7 @@ name: e2e test
 on: push  
       
 jobs:
-  Test:
+  Run e2e test:
     runs-on: macos-11
     strategy:
       matrix:
