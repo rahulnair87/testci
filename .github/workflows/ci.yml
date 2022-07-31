@@ -2,7 +2,7 @@ name: CI test
 on: pull_request
       
 jobs:
-  Build Test:
+  Build_Test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
