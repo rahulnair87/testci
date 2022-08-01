@@ -3,7 +3,7 @@ on: push
       
 jobs:
   Run_e2e_test:
-    runs-on: macos-11
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 16.x ]
@@ -26,8 +26,4 @@ jobs:
         run: npm i 
 
       - name: run e2e tests
-        run: npm run test
-
-     
-
-        
+        run: npm run test        
