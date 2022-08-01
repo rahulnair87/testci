@@ -2,7 +2,7 @@ name: e2e test
 on: push  
       
 jobs:
-  Run_e2e_test:
+  Test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-     - name: Install dependencies
+      - name: Install dependencies
         run: npm i 
 
       - name: run e2e tests
