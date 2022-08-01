@@ -3,7 +3,7 @@ on: push
       
 jobs:
   Run_e2e_tests:
-    runs-on: ubuntu-latest
+    runs-on: macos-11
     strategy:
       matrix:
         node-version: [ 16.x ]
