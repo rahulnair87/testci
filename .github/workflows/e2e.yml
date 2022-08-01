@@ -21,11 +21,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      
+      - name: Create directory for Yoroi Build
+        run: |
+          mkdir YoroiBuilds
 
-      - name: Install dependencies
-        run: npm i
-
-      - name: Configure AWS creds
+       - name: Configure AWS creds
         uses: aws-actions/configure-aws-credentials@v1
         with: 
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
@@ -34,9 +35,14 @@ jobs:
       
       - name: Copy yoroi build from S3 to local
        run: |
-       aws s3 cp s3://fibo-e2e-testdata/YoroiBuilds  YoroiB/ --recursive
-        
+       aws s3 cp s3://fibo-e2e-testdata/YoroiBuilds  ./YoroiBuilds --recursive
+
       - name: run e2e tests
         run: npm run test
+
+      - name: Install dependencies
+        run: npm i
+
+     
 
         
