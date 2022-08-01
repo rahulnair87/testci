@@ -38,7 +38,7 @@ jobs:
       
       - name: Copy yoroi build from S3 to local
         run: |
-        aws s3 cp s3://fibo-e2e-testdata/YoroiBuilds  ./YoroiBuilds --recursive
-        
+          aws s3 cp s3://fibo-e2e-testdata/YoroiBuilds  ./YoroiBuilds --recursive
+
       - name: run e2e tests
         run: npm run test        
